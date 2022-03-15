@@ -1,0 +1,62 @@
+@import '../../variables.scss';
+@import '../../helpers.scss';
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 60px $base-padding 18px;
+  position: sticky;
+  top: 0;
+  gap: $base-padding;
+  position: relative;
+}
+
+.logo {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.navigation {
+  position: absolute;
+  left: -100%;
+  top: 100%;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  line-height: 95px;
+  transition: left 1s ease-out;
+
+  &--open {
+    left: 0;
+  }
+}
+
+.selector {
+  display: flex;
+  gap: 5px;
+}
+
+@include query-large-up {
+  .header {
+    padding: 45px 110px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-right: 86px;
+  }
+
+  .navigation {
+    position: static;
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      padding: 0 25px;
+    }
+  }
+}
