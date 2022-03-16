@@ -37,6 +37,11 @@
   gap: 5px;
 }
 
+.button {
+  @include button;
+  width: 152px;
+}
+
 @include query-large-up {
   .header {
     padding: 45px 110px;
@@ -44,7 +49,7 @@
   }
 
   .logo {
-    margin-right: 86px;
+    margin-right: 8vw;
   }
 
   .navigation {
@@ -56,7 +61,11 @@
     }
 
     li {
-      padding: 0 25px;
+      padding: 0 1.8vw;
     }
+  }
+
+  .button {
+    height: 57px;
   }
 }

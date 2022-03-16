@@ -27,14 +27,14 @@ function Header() {
           <li><a href="/">O produkcie</a></li>
           <li><a href="/">Kontakt</a></li>
           <li><a href="/">FAQ</a></li>
-          {!isLg && <li><button>Kup</button></li>}
+          {!isLg && <li><button className={styles.button}>Kup</button></li>}
         </ul>
       </nav>
       <div className={styles.selector}>
         <div>PL</div>
         <ArrowDown />
       </div>
-      {isLg ? <button>Kup</button> : <MenuToggle open={navOpen} onClick={() => {setNavOpen(!navOpen);}}/>}
+      {isLg ? <button className={styles.button}>Kup</button> : <MenuToggle open={navOpen} onClick={() => {setNavOpen(!navOpen);}}/>}
     </header>
   );
 }

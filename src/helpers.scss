@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @mixin query-medium-up () {
   @media screen and (min-width: 768px){ 
     @content;
@@ -7,5 +9,18 @@
 @mixin query-large-up () {
   @media screen and (min-width: 1024px){ 
     @content;
+  }
+}
+
+@mixin button () {
+  text-transform: uppercase;
+  background-color: $orange;
+  font-weight: 900;
+  padding: 1em;
+  border-radius: 2em;
+  transition: all 500ms;
+
+  &:hover {
+    background-color: color.scale($orange, $lightness: 20%);
   }
 }
