@@ -14,10 +14,12 @@ function App() {
             <source srcSet='/maasloop_desktop.png' media="(min-width: 600px)"></source>
             <img className="image-group__image" src='/maasloop.png' alt="Product" />
           </picture>
-          <div className="image-group__text">
+          <div className="image-group__text-wrapper">
             <button className="image-group__button"><Bag /></button>
-            <h2>Płać 5 razy mniej za wywóz odpadów szklanych.</h2>
-            <p>Kruszarka zmniejsza gabaryty szklanych śmieci, a Ty płacisz PIĘ-CIO-KROT-NIE niższe rachunki za ich wywóz.</p>
+            <div className="image-group__text">
+              <h2 className="image-group__headline">Płać 5 razy mniej za wywóz odpadów szklanych.</h2>
+              <p>Kruszarka zmniejsza gabaryty szklanych śmieci, a Ty płacisz PIĘ-CIO-KROT-NIE niższe rachunki za ich wywóz.</p>
+            </div>
           </div>
         </div>
       </section>
