@@ -1,0 +1,54 @@
+@import '../../variables.scss';
+@import '../../helpers.scss';
+
+.calculator {
+  text-align: center;
+  padding: 60px $base-padding 40px;
+
+  .headline {
+    margin-bottom: 1em;
+  }
+
+  input {
+    width: 225px;
+    line-height: 70px;
+    border-radius: 15px;
+    padding: 0 $base-padding;
+    text-align: center;
+    color: $gray-form;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: $base-padding;
+    font-weight: 900;
+    margin-top: 60px;
+  }
+
+  .input-block, .result-block {
+    border-radius: 15px;
+    padding: $base-padding;
+    flex: 1;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .input-block {
+    background-color: $gray-background;
+  }
+
+  .result-block {
+    background-color: $black;
+    color: white;
+
+    .result {
+      font-size: 28px;
+      line-height: 32px;
+      opacity: 0.5;
+    }
+  }
+}

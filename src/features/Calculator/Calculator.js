@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Calculator.module.scss';
+import styles from './Calculator.module.scss';
 
 function Calculator() {
   const [bins, setBins] = useState(20);
@@ -22,20 +22,20 @@ function Calculator() {
   };
 
   return (
-    <section className="calculator">
-      <h2>Ile zaoszczędzisz?</h2>
+    <section className={styles.calculator}>
+      <h2 className={styles.headline}>Ile zaoszczędzisz?</h2>
       <p>Rachunek jest prosty.</p>
-      <form>
-        <div>
+      <form noValidate className={styles.form}>
+        <div className={styles['input-block']}>
           <label htmlFor="bins">Ile pojemników na szkło zapełniasz miesięcznie?</label>
           <input id="bins" name="bins" type="text" value={bins} onChange={changeBinInput}/>
         </div>
-        <div>
+        <div className={styles['input-block']}>
           <label htmlFor="cost">Ile płacisz za wywóz jednego pojemnika na szkło?</label>
           <input id="cost" name="cost" type="text" value={cost} onChange={changeCostInput}/>
         </div>
-        <div>
-          Dzięki kruszarce zaoszczędzisz <span>{getResult()} zł</span> rocznie.
+        <div className={styles['result-block']}>
+          Dzięki kruszarce zaoszczędzisz <span className={styles.result}>{getResult()} zł</span> rocznie.
         </div>
       </form>
     </section>
