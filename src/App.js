@@ -10,8 +10,7 @@ function App() {
       <section className="hero">
         <h1>Inteligentna kruszarka, która zamienia szkło w piasek.</h1>
         <picture>
-          <source srcSet='/maasloop_desktop.png'
-            media="(min-width: 1024px)"></source>
+          <source srcSet='/maasloop_desktop.png' media="(min-width: 1024px)"></source>
           <img src='/maasloop.png' alt="Product" />
         </picture>
         <button><Bag /></button>
