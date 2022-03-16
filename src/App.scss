@@ -6,7 +6,8 @@
 
   h1 {
     padding: 0 $base-padding;
-    margin-bottom: 60px;
+    max-width: 600px;
+    margin: 18px auto 60px auto;
   }
 }
 
@@ -123,6 +124,16 @@
     
     &__headline {
       margin-bottom: 155px;
+    }
+  }
+}
+
+@include query-large-up {
+  .hero {
+    h1 {
+      margin-bottom: 55px;
+      margin-top: 23px;
+      max-width: 997px;
     }
   }
 }
