@@ -37,10 +37,6 @@ button {
   font-family: inherit;
   font-size: 1rem;
   outline: none;
-
-   @include query-large-up {
-    font-size: 20px;
-  }
 }
 
 h1 {
