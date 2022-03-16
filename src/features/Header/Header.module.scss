@@ -6,10 +6,11 @@
   justify-content: flex-end;
   align-items: center;
   padding: 60px $base-padding 18px;
-  position: sticky;
+  position: relative;
   top: 0;
   gap: $base-padding;
-  position: relative;
+  background-color: white;
+  z-index: 10;
 }
 
 .logo {
@@ -25,7 +26,7 @@
   background-color: white;
   text-align: center;
   line-height: 95px;
-  transition: left 1s ease-out;
+  transition: left 500ms ease-out;
 
   &--open {
     left: 0;
@@ -45,8 +46,9 @@
 
 @include query-large-up {
   .header {
-    padding: 45px 110px;
+    padding: 45px 110px 20px;
     font-size: 16px;
+    position: sticky;
   }
 
   .navigation {
