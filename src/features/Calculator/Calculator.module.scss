@@ -24,6 +24,18 @@
     gap: $base-padding;
     font-weight: 900;
     margin-top: 60px;
+
+    &:focus-within, &:active {
+      .result {
+        color: $orange;
+        opacity: 1;
+      }
+
+      input {
+        border-color: $orange;
+        color: $black;
+      }
+    }
   }
 
   .input-block, .result-block {
