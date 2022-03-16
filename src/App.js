@@ -24,9 +24,11 @@ function App() {
         </div>
       </section>
       <Calculator />
-      <p>To na co wydasz zaoszczędzoną gotówkę?</p>
-      <button>KUP <span className="price">8499 zł</span></button>
-      <h2>Brzmi dobrze? Uważaj. Dopiero się rozkręcamy!</h2>
+      <section className="cta">
+        <p className="cta__paragraph">To na co wydasz zaoszczędzoną gotówkę?</p>
+        <button className="cta__button">KUP <span className="price">8499 zł</span></button>
+        <h2 className="cta__headline">Brzmi dobrze? Uważaj. Dopiero się rozkręcamy!</h2>
+      </section>
     </div>
   );
 }
