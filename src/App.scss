@@ -1,0 +1,58 @@
+@import './variables.scss';
+@import './helpers.scss';
+
+.hero {
+  text-align: center;
+
+  h1 {
+    padding: 0 $base-padding;
+    margin-bottom: 60px;
+  }
+}
+
+.image-group {
+  position: relative;
+
+  &__image {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  &__text {
+    position: relative;
+    margin-top: -50%;
+    background-color: $orange;
+    border-radius: 10px;
+    padding: 50px $base-padding 75px;
+    max-height: 365px;
+
+    h2 {
+      padding: 0 $base-padding;
+      margin-bottom: 25px;
+    }
+
+    &::before {
+      content: '';
+      background-color: white;
+      width: 100%;
+      height: calc(100% + #{$base-padding});
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 100%;
+    right: $base-padding;
+    transform: translateY(-50%);
+    @include button;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: $small-button-shadow;
+  }
+}

@@ -9,14 +9,16 @@ function App() {
       <Header />
       <section className="hero">
         <h1>Inteligentna kruszarka, która zamienia szkło w piasek.</h1>
-        <picture>
-          <source srcSet='/maasloop_desktop.png' media="(min-width: 1024px)"></source>
-          <img src='/maasloop.png' alt="Product" />
-        </picture>
-        <button><Bag /></button>
-        <div>
-          <h2>Płać 5 razy mniej za wywóz odpadów szklanych.</h2>
-          <p>Kruszarka zmniejsza gabaryty szklanych śmieci, a Ty płacisz PIĘ-CIO-KROT-NIE niższe rachunki za ich wywóz.</p>
+        <div className="image-group">
+          <picture>
+            <source srcSet='/maasloop_desktop.png' media="(min-width: 600px)"></source>
+            <img className="image-group__image" src='/maasloop.png' alt="Product" />
+          </picture>
+          <div className="image-group__text">
+            <button className="image-group__button"><Bag /></button>
+            <h2>Płać 5 razy mniej za wywóz odpadów szklanych.</h2>
+            <p>Kruszarka zmniejsza gabaryty szklanych śmieci, a Ty płacisz PIĘ-CIO-KROT-NIE niższe rachunki za ich wywóz.</p>
+          </div>
         </div>
       </section>
       <Calculator />
