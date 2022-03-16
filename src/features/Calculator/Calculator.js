@@ -32,7 +32,15 @@ function Calculator() {
         </div>
         <div className={styles['input-block']}>
           <label htmlFor="cost">Ile płacisz za wywóz jednego pojemnika na szkło?</label>
-          <input id="cost" name="cost" type="text" value={cost} onChange={changeCostInput}/>
+          <div className={styles['input-wrapper']}>
+            <input 
+              className={styles.cost} 
+              id="cost" name="cost" 
+              type="text" 
+              value={cost} 
+              onChange={changeCostInput}
+            />
+          </div>
         </div>
         <div className={styles['result-block']}>
           Dzięki kruszarce zaoszczędzisz <span className={styles.result}>{getResult()} zł</span> rocznie.

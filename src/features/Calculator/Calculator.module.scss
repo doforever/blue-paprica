@@ -38,6 +38,10 @@
         border-color: $orange;
         color: $black;
       }
+
+      .input-wrapper {
+        color: $black;
+      }
     }
   }
 
@@ -54,6 +58,12 @@
 
   .input-block {
     background-color: $gray-background;
+  }
+
+  .input-wrapper {
+    max-width: 100%;
+    position: relative;
+    color: $gray-form;
   }
 
   .result-block {
@@ -85,6 +95,24 @@
 
     .input-block {
       min-height: 260px;
+    }
+
+    .cost {
+      padding-right: 46%;
+      text-align: right;
+    }
+
+    .input-wrapper {
+      &::before {
+        content: 'zł';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 56%;
+        font-weight: 400;
+        font-size: 1rem;
+        padding-bottom: 0.8px;
+      }
     }
   }
 }
