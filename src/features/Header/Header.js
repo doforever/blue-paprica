@@ -4,7 +4,7 @@ import Hamburger from '../../icons/Hamburger';
 import Close from '../../icons/Close';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import styles from './Header.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 
 function MenuToggle({open, ...otherProps}) {
@@ -15,26 +15,39 @@ function MenuToggle({open, ...otherProps}) {
 function Header() {
   const isLg = useMediaQuery('(min-width: 1024px)');
   const [navOpen, setNavOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
- 
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 20) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
-      <MainLogo className={styles.logo}/>
-      <nav className={clsx(styles.navigation, navOpen && styles['navigation--open'])}>
-        <ul>
-          <li><a href="/">Policz zyski</a></li>
-          <li><a href="/">O produkcie</a></li>
-          <li><a href="/">Kontakt</a></li>
-          <li><a href="/">FAQ</a></li>
-          {!isLg && <li><button className={styles.button}>Kup</button></li>}
-        </ul>
-      </nav>
-      <div className={styles.selector}>
-        <div>PL</div>
-        <ArrowDown />
+    <header className={clsx(styles.header, isSticky && styles['header--sticky'])}>
+      <div className={styles['inner-wrapper']}>
+        <MainLogo className={styles.logo}/>
+        <nav className={clsx(styles.navigation, navOpen && styles['navigation--open'])}>
+          <ul>
+            <li><a href="/">Policz zyski</a></li>
+            <li><a href="/">O produkcie</a></li>
+            <li><a href="/">Kontakt</a></li>
+            <li><a href="/">FAQ</a></li>
+            {!isLg && <li><button className={styles.button}>Kup</button></li>}
+          </ul>
+        </nav>
+        <div className={styles.selector}>
+          <div>PL</div>
+          <ArrowDown />
+        </div>
+        {isLg ? <button className={styles.button}>Kup</button> : <MenuToggle open={navOpen} onClick={() => {setNavOpen(!navOpen);}}/>}
       </div>
-      {isLg ? <button className={styles.button}>Kup</button> : <MenuToggle open={navOpen} onClick={() => {setNavOpen(!navOpen);}}/>}
     </header>
   );
 }
