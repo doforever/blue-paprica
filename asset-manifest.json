@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.5c5763a9.css",
-    "main.js": "/static/js/main.8ac14259.js",
-    "static/js/787.8adf5d86.chunk.js": "/static/js/787.8adf5d86.chunk.js",
-    "static/media/maasloop_desktop.png": "/static/media/maasloop_desktop.5e13ba675cf046fbc8ff.png",
-    "static/media/maasloop.png": "/static/media/maasloop.ccf69d4a53c633a2628c.png",
-    "index.html": "/index.html",
-    "main.5c5763a9.css.map": "/static/css/main.5c5763a9.css.map",
-    "main.8ac14259.js.map": "/static/js/main.8ac14259.js.map",
-    "787.8adf5d86.chunk.js.map": "/static/js/787.8adf5d86.chunk.js.map"
+    "main.css": "/blue-paprica/static/css/main.466f8a09.css",
+    "main.js": "/blue-paprica/static/js/main.80e46102.js",
+    "static/js/787.8adf5d86.chunk.js": "/blue-paprica/static/js/787.8adf5d86.chunk.js",
+    "static/media/maasloop_desktop.png": "/blue-paprica/static/media/maasloop_desktop.5e13ba675cf046fbc8ff.png",
+    "static/media/maasloop.png": "/blue-paprica/static/media/maasloop.ccf69d4a53c633a2628c.png",
+    "index.html": "/blue-paprica/index.html",
+    "main.466f8a09.css.map": "/blue-paprica/static/css/main.466f8a09.css.map",
+    "main.80e46102.js.map": "/blue-paprica/static/js/main.80e46102.js.map",
+    "787.8adf5d86.chunk.js.map": "/blue-paprica/static/js/787.8adf5d86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c5763a9.css",
-    "static/js/main.8ac14259.js"
+    "static/css/main.466f8a09.css",
+    "static/js/main.80e46102.js"
   ]
 }
