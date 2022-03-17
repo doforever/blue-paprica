@@ -15,7 +15,10 @@ function MenuToggle({open, ...otherProps}) {
 function Header() {
   const isLg = useMediaQuery('(min-width: 1024px)');
   const [navOpen, setNavOpen] = useState(false);
+  const [selectOpen, setSelectOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [lang, setLang] = useState('PL');
+  const languages = ['PL', 'EN', 'DE', 'GB'];
 
   useEffect(() => {
     const onScroll = () => {
@@ -42,11 +45,28 @@ function Header() {
             {!isLg && <li><button className={styles.button}>Kup</button></li>}
           </ul>
         </nav>
-        <div className={styles.selector}>
-          <div>PL</div>
-          <ArrowDown />
-        </div>
-        {isLg ? <button className={styles.button}>Kup</button> : <MenuToggle open={navOpen} onClick={() => {setNavOpen(!navOpen);}}/>}
+        <ul className={clsx(styles.selector, selectOpen && styles['selector--open'])}>
+          <div className={styles.options}>
+            <li
+              className={clsx(styles.option, styles['option--active'])}
+              onClick={() => {setSelectOpen(false);}}
+            >{lang}</li>
+            {languages.map(l => ( l !== lang &&
+              <li 
+                key={l} 
+                className={styles.option}
+                onClick={() => {setLang(l); setSelectOpen(false);}}
+              >{l}</li>
+            ))}
+          </div>
+          <button onClick={() => { setSelectOpen(!selectOpen); }}>
+            <ArrowDown className={styles.selector__toggle}/>
+          </button>
+        </ul>
+        {isLg 
+          ? <button className={styles.button}>Kup</button> 
+          : <button><MenuToggle open={navOpen} onClick={() => {setNavOpen(!navOpen);}}/></button>
+        }
       </div>
     </header>
   );

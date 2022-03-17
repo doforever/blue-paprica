@@ -46,6 +46,7 @@ button {
   font-family: inherit;
   font-size: 1rem;
   outline: none;
+  cursor: pointer;
 }
 
 input {
@@ -77,4 +78,10 @@ h2 {
     font-size: 40px;
     line-height: 49px;
   }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

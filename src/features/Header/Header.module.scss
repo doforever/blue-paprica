@@ -42,8 +42,47 @@
 }
 
 .selector {
-  display: flex;
-  gap: 5px;
+  position: relative;
+  height: 40px;
+  align-items: center;
+  overflow: hidden;
+  width: 67px;
+
+  &--open {
+    overflow: visible;
+    
+    .options {
+      box-shadow: $input-calculator-shadow;
+    }
+
+    .option {
+      cursor: pointer;
+
+      &:not(:last-child) {
+         border-bottom: 1px solid $gray-form;
+      }
+    }
+  }
+
+  .options {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  .option {
+    line-height: 40px;
+    margin: 0 10px;
+    padding: 0 6px;
+  }
+
+  &__toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .button {
