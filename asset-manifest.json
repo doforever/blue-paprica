@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/doforever/blue-paprica/static/css/main.d68ecdc4.css",
+    "main.js": "/doforever/blue-paprica/static/js/main.9724771d.js",
+    "static/js/787.8adf5d86.chunk.js": "/doforever/blue-paprica/static/js/787.8adf5d86.chunk.js",
+    "index.html": "/doforever/blue-paprica/index.html",
+    "main.d68ecdc4.css.map": "/doforever/blue-paprica/static/css/main.d68ecdc4.css.map",
+    "main.9724771d.js.map": "/doforever/blue-paprica/static/js/main.9724771d.js.map",
+    "787.8adf5d86.chunk.js.map": "/doforever/blue-paprica/static/js/787.8adf5d86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d68ecdc4.css",
+    "static/js/main.9724771d.js"
+  ]
+}
