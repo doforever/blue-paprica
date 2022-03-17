@@ -2,6 +2,8 @@ import Header from './features/Header/Header';
 import Calculator from './features/Calculator/Calculator';
 import './App.scss';
 import Bag from './icons/Bag';
+import photo from './images/maasloop_desktop.png';
+import mobilePhoto from './images/maasloop.png';
 
 function App() {
   return (
@@ -11,8 +13,8 @@ function App() {
         <h1>Inteligentna kruszarka, która zamienia szkło w piasek.</h1>
         <div className="image-group">
           <picture>
-            <source srcSet='/maasloop_desktop.png' media="(min-width: 600px)"></source>
-            <img className="image-group__image" src='/maasloop.png' alt="Product" />
+            <source srcSet={photo} media="(min-width: 600px)"></source>
+            <img className="image-group__image" src={mobilePhoto} alt="Product" />
           </picture>
           <div className="image-group__text-wrapper">
             <button className="image-group__button"><Bag /></button>
