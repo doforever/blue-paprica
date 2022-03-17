@@ -19,6 +19,10 @@
     padding: 0 $base-padding;
     text-align: center;
     color: $gray-form;
+
+    &:focus, &:active {
+      box-shadow: $input-calculator-shadow;
+    }
   }
 
   .form {
